@@ -10,7 +10,6 @@ Phar3on is a local deception-defense framework. The idea is simple: create belie
 
 Tagline: "Guard the tomb. Trap the thief."
 
-![Phar3on banner](phar3on/assets/banner.svg)
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
