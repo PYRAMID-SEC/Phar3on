@@ -1,4 +1,10 @@
 # Phar3on
+<div>
+  <p align="center">
+  <img src="https://github.com/ahmed-tarek22752/wadjet/blob/main/cmd/wadjet/im.jpg" alt="Wadjet logo" width="400"/>
+</p>
+  
+</div>
 
 Phar3on is a local deception-defense framework. The idea is simple: create believable decoys and traps that no legitimate user should touch, then treat any contact as a high-confidence signal of intrusion.
 
@@ -8,6 +14,7 @@ Tagline: "Guard the tomb. Trap the thief."
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](https://opensource.org/licenses/MIT)
+
 
 ## What is deception defense?
 
