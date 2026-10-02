@@ -1,7 +1,7 @@
 # Phar3on
 <div>
   <p align="center">
-  <img src="https://github.com/ahmed-tarek22752/wadjet/blob/main/cmd/wadjet/im.jpg" alt="Wadjet logo" width="400"/>
+  <img src="https://github.com/ahmed-tarek22752/Phar3on/blob/master/src/phar3on/ph.png" alt="Wadjet logo" width="400"/>
 </p>
   
 </div>
