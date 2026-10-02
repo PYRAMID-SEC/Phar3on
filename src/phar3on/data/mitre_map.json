@@ -1,0 +1,7 @@
+{
+  "T1595": {"name": "Active Scanning", "stage": "Recon"},
+  "T1110": {"name": "Brute Force", "stage": "Credential Access"},
+  "T1190": {"name": "Exploit Public-Facing Application", "stage": "Initial Access"},
+  "T1083": {"name": "File and Directory Discovery", "stage": "Discovery"},
+  "T1552": {"name": "Unsecured Credentials", "stage": "Collection"}
+}

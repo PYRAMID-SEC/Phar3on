@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phar3on Dashboard</title>
+  <style>
+    body { background:#0B1426; color:#dfe7f1; margin:0; font-family:sans-serif; }
+    .top { display:flex; justify-content:space-between; padding:18px 22px; border-bottom:1px solid #1d2c46; }
+    .brand { color:#00D1FF; font-weight:700; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px; padding:16px; }
+    .card { background:#101d34; border:1px solid #1d2c46; border-radius:12px; padding:14px; }
+    .metric { font-size:2rem; color:#D4AF37; }
+    pre { white-space:pre-wrap; }
+  </style>
+</head>
+<body>
+  <div class="top"><div class="brand">Phar3on</div><div>Guard the tomb. Trap the thief.</div></div>
+  <div class="grid">
+    <div class="card"><div>Live incidents</div><div id="incidents" class="metric">0</div></div>
+    <div class="card"><div>Threat score</div><div id="threat" class="metric">0</div></div>
+    <div class="card"><div>Top attacker</div><div id="attacker" class="metric">N/A</div></div>
+  </div>
+  <div class="grid">
+    <div class="card"><h3>Live event feed</h3><pre id="feed">Waiting for events...</pre></div>
+    <div class="card"><h3>ATT&CK heat</h3><pre id="mitre">[]</pre></div>
+  </div>
+  <script>
+    const source = new EventSource('/events');
+    source.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+      const feed = document.getElementById('feed');
+      feed.textContent = JSON.stringify(data, null, 2) + '\n' + feed.textContent;
+      document.getElementById('incidents').textContent = String((data.events || []).length || 0);
+      document.getElementById('threat').textContent = String(data.score || 0);
+      document.getElementById('attacker').textContent = data.ip || 'N/A';
+      document.getElementById('mitre').textContent = JSON.stringify(data.mitre || [], null, 2);
+    };
+  </script>
+</body>
+</html>

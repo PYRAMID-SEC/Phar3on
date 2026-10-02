@@ -1,0 +1,7 @@
+{
+  "port_scan": 18,
+  "credential_bruteforce": 28,
+  "web_probe": 12,
+  "bait_access": 30,
+  "multistage": 15
+}

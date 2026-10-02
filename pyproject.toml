@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phar3on"
+version = "0.1.0"
+description = "Phar3on local deception-defense framework"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Ahmed Tarek Salah" }]
+keywords = ["security", "deception", "honeypot", "forensics"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Information Security",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "black>=24.4",
+    "ruff>=0.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/example/phar3on"
+Repository = "https://github.com/example/phar3on"
+
+[project.scripts]
+phar3on = "phar3on.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
